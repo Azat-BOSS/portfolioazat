@@ -1,0 +1,19 @@
+.header {
+  width: inherit;
+}
+
+.header__wrapper_up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  background-color: rgb(14, 14, 14);
+}
+
+.header__wrapper__title {
+  font-family: "Neue";
+  color: white;
+  font-weight: 400;
+}
