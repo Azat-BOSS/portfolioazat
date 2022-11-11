@@ -1,0 +1,30 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+
+.modal__container {
+  width: 35%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem 1.5rem;
+  transition: all .7s ease-in-out;
+  transform: translateX(-110%);
+  z-index: 2;
+}
+
+.modal__container_active {
+  transform: translateX(0);
+  width: 35%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem 1.5rem;
+  transition: all .7s ease;
+  z-index: 2;
+}
