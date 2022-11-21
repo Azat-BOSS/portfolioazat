@@ -1,0 +1,265 @@
+.about {
+  padding-top: 15rem;
+  background-color: rgb(22, 22, 22);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about__block__intro {
+  display: flex;
+  column-gap: 50px;
+  color: white;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .about__block__intro {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.about__title {
+  font-family: "Neue", "Arial", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 700px) {
+  .about__title {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+}
+
+.about__link {
+  font-family: "Neue", "Arial", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  position: relative;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+  .about__link {
+    text-align: center;
+    display: block;
+  }
+}
+
+.about__link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-bottom: 2px solid white;
+  width: 0%;
+  transition: 0.4s ease;
+}
+
+.about__link:hover:after {
+  width: 100%;
+}
+
+.about__text {
+  font-family: "Neue", "Arial", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  opacity: 1;
+  font-weight: 300;
+  text-decoration: none;
+  max-width: 40px;
+  line-height: 1.5;
+  margin-top: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  animation: textAbout 5s 5s infinite alternate;
+}
+
+@media screen and (max-width: 700px) {
+  .about__text {
+    max-width: 700px;
+    text-align: center;
+  }
+}
+
+.about__bg__image {
+  background-image: url("../../images/portret.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+
+@media screen and (max-width: 425px){
+  .about__bg__image {
+    width: 100%;
+    max-width: 390px;
+    height: 350px;
+  }
+}
+
+
+/* info */
+
+.about__info {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .about__info {
+    margin-top: 20rem;
+  }
+}
+
+.about__info__title {
+  font-family: "Neue", "Arial", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  padding: 0 20px;
+}
+
+.about__info__text {
+  font-family: "Neue", "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 0 20px;
+  opacity: 0.8;
+  letter-spacing: 1.3px;
+  text-align: center;
+}
+
+.about__skills {
+  margin-top: 5rem;
+}
+
+.about__icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 3rem;
+  column-gap: 5rem;
+}
+
+@media screen and (max-width: 425px){
+  .about__icons {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+    column-gap: 3rem;
+  }
+}
+
+.about__icons__image {
+  width: 5rem;
+  height: 5rem;
+}
+
+.about__icons__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.about__icons__text {
+  font-family: "Neue", "Arial", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0 20px;
+  opacity: 0.8;
+}
+
+@keyframes textAbout {
+  from {
+    color: red;
+  }
+  to {
+    color: white;
+  }
+}
+
+/* contact */
+
+.about__contact {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .about__contact {
+    margin: 20rem 0;
+  }
+}
+
+.about__contact__title {
+  font-family: "Neue", "Arial", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  padding: 0 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .about__contact__title {
+    line-height: 1.2;
+  }
+}
+
+.about__contact__button {
+  width: 20rem;
+  height: 5rem;
+  border: 1px solid white;
+  color: white;
+  font-family: "Neue", "Arial", sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: 1s color ease;
+  z-index: 0;
+  margin-top: 5rem;
+}
+
+.about__contact__text {
+  font-family: "Neue", "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 0 20px;
+  opacity: 0.8;
+  letter-spacing: 1.3px;
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+.about__contact__button::before {
+  background: white;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+  width: 0%;
+  height: 100%;
+  z-index: -2;
+}
+
+.about__contact__button:hover {
+  color: black;
+}
+
+.about__contact__button:hover::before {
+  width: 100%;
+}

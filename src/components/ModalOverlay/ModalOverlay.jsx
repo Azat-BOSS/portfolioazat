@@ -13,7 +13,7 @@ const ModalOverlay = ({overlay, setOverlay}) => {
 
 ModalOverlay.ProptTypes = {
   overlay: ProptTypes.bool,
-  setOverlay: ProptTypes.func
+  setOverlay: ProptTypes.func.isRequired
 }
 
  

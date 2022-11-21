@@ -1,4 +1,10 @@
 .home {
   position: relative;
   width: inherit;
+  scroll-snap-type: y proximity;
+  transition: .4s linear;
+}
+
+.home > .scroll {
+  scroll-snap-align: center;
 }

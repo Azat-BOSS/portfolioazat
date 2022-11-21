@@ -1,0 +1,2 @@
+export const MODAL_ACTION = "MODAL_ACTION"
+export const MODAL_ACTION_HOME = "MODAL_ACTION_HOME"

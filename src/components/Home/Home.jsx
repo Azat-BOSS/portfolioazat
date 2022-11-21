@@ -1,27 +1,25 @@
-import React from "react";
-import Project from "./Project/Project";
+import React, { useEffect } from "react";
 import homeStyle from "./home.module.css";
 
-const textAnimation = {
-  hidden: {
-    x: -100,
-    opacity: 0,
-  },
-  visible: (custom) => ({
-    x: 0,
-    opacity: 1,
-    transition: {
-      delay: custom * 0.2,
-      duration: custom * 0.6,
-      type: "spring",
-    },
-  }),
-};
+import Project from "./Project/Project";
+import MestoProject from "./MestoProject/MestoProject";
+import ProjitoProject from "./ProjitoProject/ProjitoProject";
+import ModalContact from "../ModalContact/ModalContact";
 
+import { textAnimation, textAnimationZen, textAnimationProjito } from "../../animations/animation.js"
 const Home = () => {
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo(0, 0);
+    }
+    scrollToTop()
+  }, [])
   return (
     <div className={homeStyle.home}>
-      <Project textAnimation={textAnimation}/>
+      <ModalContact/>
+      <Project textAnimation={textAnimation} className={homeStyle.scroll}/>
+      <MestoProject textAnimationZen={textAnimationZen} className={homeStyle.scroll}/>
+      <ProjitoProject textAnimationProjito={textAnimationProjito} className={homeStyle.scroll}/>
     </div>
   );
 };

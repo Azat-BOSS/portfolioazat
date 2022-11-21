@@ -1,12 +1,13 @@
 import React from "react";
 import appStyle from "./App.module.css";
 
-import { Routes, Route } from "react-router-dom";
-
+import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Layout from "./components/layouts/Layout";
 import About from "./components/About/About";
-import Blog from "./components/Blog/Blog";
+import Zen from "./components/Home/Pages/Zen/Zen";
+import Mesto from "./components/Home/Pages/Mesto/Mesto";
+import Projito from "./components/Home/Pages/Projito/Projito"
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/zen" element={<Zen />} />
+          <Route path="/mesto" element={<Mesto />} />
+          <Route path="/projito" element={<Projito />} />
         </Route>
       </Routes>
     </div>

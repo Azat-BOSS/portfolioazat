@@ -26,7 +26,9 @@
   color: black;
   text-decoration: none;
   margin-top: 10px;
+  text-align: start;
   transition: opacity .4s linear;
+  padding: 0;
 }
 
 .navlink:hover {
