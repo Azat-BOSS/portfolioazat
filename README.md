@@ -16,8 +16,9 @@
   - Redux
   - Framer Motion - library for animations 
   
- ## Github pages
-  Pages 
+ ## Website
+  [Website](https://azatfront.ru/)
+  
   
   
   
